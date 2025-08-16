@@ -3,25 +3,25 @@ A microcontroller-based ATM booth with secure PIN authentication, balance inquir
 
 Tech Stack & Components
 
-Microcontroller: Atmega32
+  - Microcontroller: Atmega32
 
-Language: Embedded C
+  - Language: Embedded C
 
 Peripherals:
 
-LCD Display (16x2)
+  - LCD Display (16x2)
 
-Keypad input
+  - Keypad input
 
-Motors (simulate cash dispense & ATM lock)
+  - Motors (simulate cash dispense & ATM lock)
 
-LEDs (status indication)
+  - LEDs (status indication)
 
 Tools:
 
-AVR-GCC / CodeVisionAVR
+  - AVR-GCC / CodeVisionAVR
 
-Proteus (for simulation)
+  - Proteus (for simulation)
 
 Flowchart
 
@@ -29,40 +29,40 @@ Flowchart
 
 Usage
 
-Power up the ATM system.
+  - Power up the ATM system.
 
-Insert a “card” (simulated with keypad input).
+  - Insert a “card” (simulated with keypad input).
 
-Enter PIN:
+  - Enter PIN:
 
-1234 → User 1 (balance: 10,000)
+  - 1234 → User 1 (balance: 10,000)
 
-2024 → User 2 (balance: 4,300)
+  - 2024 → User 2 (balance: 4,300)
 
-Select operation:
+  - Select operation:
 
-1 → Check balance
+  - 1 → Check balance
 
-2 → Withdraw cash
+  - 2 → Withdraw cash
 
-3 → Exit
+  - 3 → Exit
 
-If more than 3 wrong PIN attempts → ATM locks.
+  - If more than 3 wrong PIN attempts → ATM locks.
 
-Session automatically times out after 30s of inactivity.
+  - Session automatically times out after 30s of inactivity.
 
 Example Workflow
 
-User enters PIN 1234
+  - User enters PIN 1234
 
-Chooses Balance → LCD shows 10000
+  - Chooses Balance → LCD shows 10000
 
-Chooses Withdraw and enters 1500 → New balance 8500, motor simulates cash dispense
+  - Chooses Withdraw and enters 1500 → New balance 8500, motor simulates cash dispense
 
 Security Features
 
-3 wrong PIN attempts → ATM locks (motor + LED alert)
+  - 3 wrong PIN attempts → ATM locks (motor + LED alert)
 
-Session timeout after 30 seconds
+  - Session timeout after 30 seconds
 
-Withdrawal validation (only multiples of 500)
+  - Withdrawal validation (only multiples of 500)
